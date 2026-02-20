@@ -27,10 +27,10 @@ export default function RootLayout({
         <div className="dark bg-black text-white min-h-screen flex flex-col">
           <Header />
           <main className="relative px-7 flex-1 flex flex-col pt-24 pb-32 overflow-y-auto overflow-x-hidden">
-            {/* Grid background overlay */}
+            {/* Modern grid background overlay */}
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:32px_32px]"
+              className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(255,255,255,0.12)_1.5px,transparent_1.5px)] [background-size:32px_32px]"
             />
             <div className="relative z-10">{children}</div>
           </main>
