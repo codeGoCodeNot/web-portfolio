@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 const navLinks = [
   { label: "Projects", href: "/#projects" },
   { label: "About", href: "/#about-me" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 const Header = () => {
@@ -18,11 +19,6 @@ const Header = () => {
             <Link href={link.href}>{link.label}</Link>
           </Button>
         ))}
-      </div>
-      <div>
-        <Button variant="outline" asChild>
-          <Link href="/#contact">Contact me</Link>
-        </Button>
       </div>
     </header>
   );
