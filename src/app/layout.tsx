@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -23,11 +20,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} antialiased dark:bg-black dark:text-white`}
       >
-        {children}
+        <div className="dark bg-black text-white min-h-screen flex flex-col">
+          <Header />
+          <main className="relative px-7 flex-1 flex flex-col pt-24 pb-32 overflow-y-auto overflow-x-hidden">
+            {/* Grid background overlay */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:32px_32px]"
+            />
+            <div className="relative z-10">{children}</div>
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
