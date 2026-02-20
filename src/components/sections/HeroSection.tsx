@@ -1,3 +1,4 @@
+import { AnimatedSeparator } from "../ui/animated-separator";
 const HeroSection = () => (
   <section className="py-16 text-center">
     <h1 className="text-4xl font-bold mb-4">
@@ -8,7 +9,7 @@ const HeroSection = () => (
       life.
     </p>
     <div className="w-full flex justify-center">
-      <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-gray-700 to-transparent my-12" />
+      <AnimatedSeparator className="w-2/3 my-12" />
     </div>
   </section>
 );

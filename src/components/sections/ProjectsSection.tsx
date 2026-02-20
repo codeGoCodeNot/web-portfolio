@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Card } from "../ui/card";
 import { Separator } from "../ui/separator";
+import { AnimatedSeparator } from "../ui/animated-separator";
 
 const projects = [
   {
@@ -60,7 +61,7 @@ const ProjectsSection = () => (
       ))}
     </div>
     <div className="w-full flex justify-center">
-      <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-gray-700 to-transparent my-12" />
+      <AnimatedSeparator className="w-2/3 my-12" />
     </div>
   </section>
 );

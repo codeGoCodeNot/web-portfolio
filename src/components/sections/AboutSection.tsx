@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { AnimatedSeparator } from "../ui/animated-separator";
 
 const AboutSection = () => (
   <section className="py-16" id="about-me">
@@ -34,8 +35,8 @@ const AboutSection = () => (
         </Link>
       </Button>
     </div>
-    <div className="w-full flex justify-center">
-      <div className="h-px w-2/3 bg-gradient-to-r from-transparent via-gray-700 to-transparent my-12" />
+    <div className="w-full flex justify-center my-12">
+      <AnimatedSeparator className="w-2/3" />
     </div>
   </section>
 );

@@ -1,15 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
 const ContactSection = () => (
-  <section className="py-10 flex flex-col gap-y-10" id="contact">
+  <section className="py-10 flex flex-col gap-y-10">
     <div>
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Me</h2>
     </div>
