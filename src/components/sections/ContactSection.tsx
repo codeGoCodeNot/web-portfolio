@@ -1,5 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
 
 const ContactSection = () => (
   <section className="py-10 flex flex-col gap-y-10" id="contact">
@@ -8,42 +15,27 @@ const ContactSection = () => (
     </div>
 
     <div className="flex justify-center">
-      <div className="bg-gradient-to-br from-gray-900/90 to-gray-800/80 border border-gray-700 rounded-2xl shadow-xl px-10 py-8 flex flex-col items-center gap-4 min-w-[320px] max-w-full">
-        <span className="text-lg font-semibold text-white tracking-wide">
-          09260826406
-        </span>
-        <span className="text-lg font-semibold text-white tracking-wide">
-          johnsenberdin2930@gmail.com
-        </span>
-        <div className="flex gap-6 mt-2">
+      <Card className="px-6 py-6 flex flex-col items-center gap-4 min-w-[260px] max-w-full border shadow-sm">
+        <CardHeader className="flex flex-col items-center gap-1 w-full p-0">
+          <CardTitle className="text-base font-semibold text-primary tracking-wide mb-1">
+            Johnsen Berdin
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="flex flex-col items-center gap-2 w-full p-0">
           <Link
-            href="https://github.com/codeGoCodeNot"
-            target="_blank"
-            className="hover:scale-110 transition-transform"
+            href="tel:09260826406"
+            className="flex items-center gap-2 text-sm text-foreground hover:underline"
           >
-            <Image
-              src="/logo/github.png"
-              width={32}
-              height={32}
-              alt="GitHub"
-              className="rounded border bg-white"
-            />
+            09260826406
           </Link>
           <Link
-            href="https://linkedin.com/in/johnsen-berdin-a30b4a383"
-            target="_blank"
-            className="hover:scale-110 transition-transform"
+            href="mailto:johnsenberdin2930@gmail.com"
+            className="flex items-center gap-2 text-sm text-foreground hover:underline"
           >
-            <Image
-              src="/logo/linkedin.png"
-              width={32}
-              height={32}
-              alt="LinkedIn"
-              className="rounded"
-            />
+            johnsenberdin2930@gmail.com
           </Link>
-        </div>
-      </div>
+        </CardContent>
+      </Card>
     </div>
   </section>
 );

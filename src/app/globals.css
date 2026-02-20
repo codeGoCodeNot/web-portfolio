@@ -1,3 +1,17 @@
+@keyframes slide-from-top {
+  0% {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-from-top {
+  animation: slide-from-top 0.5s ease-out forwards;
+}
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";

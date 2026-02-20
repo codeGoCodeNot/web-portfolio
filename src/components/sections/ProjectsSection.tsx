@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card } from "../ui/card";
+import { Separator } from "../ui/separator";
 
 const projects = [
   {
@@ -24,26 +25,27 @@ const projects = [
 
 const ProjectsSection = () => (
   <section className="py-16" id="projects">
-    <h2 className="text-3xl font-bold mb-6 text-center tracking-widest text-gray-200">
+    <h2 className="text-3xl font-bold mb-6 text-center tracking-widest text-gray-300">
       Portfolio
     </h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {projects.map((project) => (
         <Card
           key={project.title}
-          className="relative group p-7 flex flex-col text-gray-200 overflow-hidden hover:scale-[1.025] transition-transform"
+          className="relative group p-7 flex flex-col text-gray-200 overflow-hidden hover:scale-[1.025] transition-transform bg-secondary/35"
         >
           <div className="absolute right-4 top-4 opacity-10 text-7xl font-black select-none pointer-events-none group-hover:opacity-20 transition-opacity">
             {project.title[0]}
           </div>
           <div className="flex-1 flex flex-col justify-center items-center mb-4">
-            <span className="text-2xl font-bold mb-2 text-primary drop-shadow-lg">
+            <span className="text-2xl font-bold mb-2 text-primary/95 drop-shadow-lg">
               {project.title}
             </span>
-            <p className="text-sm text-gray-400 text-center mb-2 px-2">
+            <p className="text-sm text-muted-foreground text-center mb-2 px-2">
               {project.description}
             </p>
           </div>
+          <Separator />
           <div className="flex gap-2 mt-auto justify-center">
             <Link
               href={project.live}

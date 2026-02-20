@@ -20,7 +20,7 @@ const Header = () => {
         ))}
       </div>
       <div>
-        <Button variant="default" asChild>
+        <Button variant="outline" asChild>
           <Link href="/#contact">Contact me</Link>
         </Button>
       </div>

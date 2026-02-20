@@ -3,11 +3,14 @@ import { Button } from "../ui/button";
 
 const AboutSection = () => (
   <section className="py-16" id="about-me">
-    <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <h2 className="text-4xl font-bold mb-6 text-center font-satoshi">
+      About Me
+    </h2>
     <div className="max-w-2xl mx-auto text-center text-lg text-gray-200">
       <p className="mb-4">
-        Hi, I'm <span className="font-bold">Johnsen Berdin</span> — a curious
-        and passionate web developer, always learning, building, and
+        Hi, I'm{" "}
+        <span className="font-bold font-satoshi text-2xl">Johnsen Berdin</span>{" "}
+        — a curious and passionate web developer, always learning, building, and
         experimenting with new tech. My work focuses on Next.js, TypeScript, and
         modern web practices, as seen in my open-source projects. I am also a
         licensed Customs broker in the Philippines, combining technical
